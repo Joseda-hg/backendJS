@@ -1,10 +1,21 @@
 {
-    "name": "node-api-rest-example",
-    "version": "2.0.0",
-    "dependencies": {
-    "mongoose": "~3.6.11",
-    "express": "^4.7.1",
-    "method-override": "^2.1.2",
-    "body-parser": "^1.5.1"
-    }
-   }
+  "name": "backendjs",
+  "version": "0.0.1",
+  "description": "This is the backend service for my personal page",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Joseda-hg",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "mysql": "2.18.1"
+  },
+  "engines": {
+    "node": "14.x"
+  }
+}
