@@ -13,9 +13,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Solo existe para ser consumida por el frontend
 
 
-// app.get("/", (req, res) => {
-//   res.redirect('https://bsalefrontendjhernandez.herokuapp.com/');
-// });
+app.get("/", (req, res) => {
+  res.redirect('http://joseda.xyz/');
+});
 
 
 
