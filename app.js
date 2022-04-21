@@ -1,6 +1,6 @@
+const bodyParser = require("body-parser");
 const express = require("express");
-const bodyParser = require("body-parser")
-const cors = require("cors")
+const cors = require("cors");
 const app = express();
 
 // parse requests of content-type: application/json
@@ -23,6 +23,8 @@ app.use(cors())
 
 // Rutas para las requests
 // require("./routes/product.routes.js")(app);
+require("routes/backend.routes.js")(app);
+
 
 // Configurar puertos, recibido desde una variable de entorno proporcionada por Heroku
 app.listen(process.env.PORT || 5000, () => {
