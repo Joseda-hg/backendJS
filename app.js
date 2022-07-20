@@ -23,10 +23,12 @@ app.use(cors())
 
 // Rutas para las requests
 // require("./routes/product.routes.js")(app);
-require("/routes/backend.routes.js")(app);
+require("./routes/backend.routes.js")(app); 
 
 
 // Configurar puertos, recibido desde una variable de entorno proporcionada por Heroku
-app.listen(process.env.PORT || 5000, () => {
+// app.listen(5000, () => {
+app.listen( process.env.PORT || 5000, () => {
+
   console.log(`Server is running on port ${process.env.PORT}.`);
 });
