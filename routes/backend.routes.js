@@ -19,5 +19,6 @@
 //   };
 
 module.exports = app => {
+    const mail = require("../controllers/mail.controller.js")
     app.get("/api/mail",mail.send);
 }
