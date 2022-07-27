@@ -19,14 +19,16 @@
     //   };
     
 
+require('dotenv').config();
 function sendMail(to,subject,text){
-    require('dotenv').config();
 
     const sgMail = require('@sendgrid/mail')
     sgMail.setApiKey("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")
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+    console.log(process.env.SENDGRID_API_KEY)
     const msg = {
       to: to, // Change to your recipient
-      from: 'josedhg29@gmail.com', // Change to your verified sender
+      // from: 'josedhg29@gmail.com', // Change to your verified sender
       subject: subject,
       text: text,
     //   html: '<strong>and easy to do anywhere, even with Node.js</strong>',
@@ -44,3 +46,4 @@ function sendMail(to,subject,text){
     module.exports = app => {
     app.post("/api/mail",sendMail);
 }
+console.log(process.env.REACT_APP_SENDGRID_API_KEY)
