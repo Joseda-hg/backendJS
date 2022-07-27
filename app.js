@@ -13,9 +13,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Redireccion basica, ya que esta aplicacion no posee una GUI real
 // Solo existe para ser consumida por el frontend
 
-
 app.get("/", (req, res) => {
-  res.redirect('http://joseda.xyz/');
+  res.redirect('https://josedaxyz-frontend.herokuapp.com/');
 });
 
 
