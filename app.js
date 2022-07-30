@@ -28,7 +28,7 @@ require("./routes/backend.routes.js")(app);
 
 // Configurar puertos, recibido desde una variable de entorno proporcionada por Heroku
 // app.listen(5000, () => {
-app.listen(process.env.PORT || 5000, () => {
+app.listen(5000 ||  process.env.PORT ,() => {
 
   console.log(`Server is running on port ${process.env.PORT}.`);
 });
