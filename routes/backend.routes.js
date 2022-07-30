@@ -23,7 +23,6 @@ require('dotenv').config();
 function sendMail(to,subject,text){
 
     const sgMail = require('@sendgrid/mail')
-    sgMail.setApiKey("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")
     sgMail.setApiKey(process.env.SENDGRID_API_KEY)
     console.log(process.env.SENDGRID_API_KEY)
     const msg = {
